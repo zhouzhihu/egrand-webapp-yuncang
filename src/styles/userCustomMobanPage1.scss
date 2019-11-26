@@ -1,0 +1,305 @@
+// userCustomMobanPage1.scss  用户自定义模板1：按钮组+查询表单+操作表格+分页
+
+//变量定义
+$border:1px solid #e9e9e9; //边框
+$highborder:1px solid #3491eb; //边框
+$pageBackground:#f9f9f9; //页面背景色
+$intBackground:#fff; //模块背景色
+$fontFamily:"微软雅黑,microsoft yahei"; //字体
+$color:#666666; //字体颜色
+$highColor:#3491eb; //高亮颜色
+$tableHeaderBackground: #f5f7fa;
+$statusNormalColor:#10ad57; //表格状态的正常颜色
+$statusAbnormalColor:#ffb82b; //表格状态的异常颜色
+$operationNormalColor:#20a0ff; //表格操作的正常颜色
+$operationAbnormalColor:#ff4949; //表格操作的删除颜色
+
+
+.userCustomMobanPage1 {
+  width: 100%;
+  font-family: $fontFamily;
+  color: $color;
+
+  .userCustomMobanPageContainer {
+    overflow: hidden;
+    padding: 11px 16px 11px 16px;
+    background: $intBackground;
+
+    .userCustomMobanPageContainer-buttons {
+      display: block;
+      height: auto;
+      overflow: hidden;
+      border-radius: 4px;
+
+      .el-button {
+        width: 65px;
+        height: 26px;
+        padding: 0;
+        color: $color;
+        margin: 0 10px 8px 0;
+      }
+    }
+
+    .userCustomMobanPageContainer-contents{
+      overflow: hidden;
+      padding-bottom: 10px;
+      
+      .userCustomMobanPageContainer-conditions {
+        display: block;
+        border: $border;
+        border-radius: 4px;
+        background: $intBackground;
+        overflow: hidden;
+        padding: 10px 0;
+        margin-bottom: 12px;
+  
+        .userCustomMobanPageContainer-conditions__form {
+          width: 100%;
+  
+          .el-form-item {
+            margin: 12px 0;
+            padding: 0;
+            width: 100%;
+  
+            .el-form-item__label {
+              width: 30%;
+              font-size: 12px;
+              line-height: 28px;
+            }
+  
+            .el-form-item__content {
+              font-size: 12px;
+              line-height: normal;
+  
+              .el-input {
+                .el-input__inner {
+                  width: 210px;
+                  height: 28px;
+                  border-radius: 0;
+                  font-size: 12px;
+                }
+              }
+
+              .el-radio__label{
+                font-size: 12px;
+              }
+              .el-cascader{
+                font-size: 12px;
+              }
+  
+              .el-textarea{
+                width: 210px;
+                border-radius: 0;
+                .el-textarea__inner{
+                  border-radius: 0;
+                }
+              }
+  
+              .el-cascader {
+                font-size: 12px;
+                height: 28px;
+                line-height: 28px;
+              }
+  
+  
+  
+              .el-select {
+                height: 28px;
+                line-height: 28px;
+  
+                .el-tag {
+                  background-color: #f0f2f5a8;
+                }
+  
+                .el-input.el-input--suffix {
+                  height: 28px;
+                  line-height: 28px;
+  
+                  .el-input__inner {
+                    height: 28px;
+                    line-height: 28px;
+                  }
+                }
+              }
+  
+              .el-date-editor.el-range-editor.el-input__inner.el-date-editor--daterange {
+                width: 210px;
+                height: 28px;
+                border-radius: 0;
+  
+                .el-range__icon {
+                  line-height: 20px;
+                }
+  
+                .el-range-input {
+                  font-size: 12px;
+                }
+  
+                .el-range-separator {
+                  line-height: 20px;
+                  font-size: 12px;
+                }
+  
+                .el-range__close-icon {
+                  line-height: 20px;
+                }
+              }
+              .el-date-editor.el-range-editor.el-input__inner.el-date-editor--datetimerange {
+                width: 210px;
+                height: 28px;
+                border-radius: 0;
+  
+                .el-range__icon {
+                  line-height: 20px;
+                }
+  
+                .el-range-input {
+                  font-size: 12px;
+                }
+  
+                .el-range-separator {
+                  line-height: 20px;
+                  font-size: 12px;
+                  width: auto;
+                }
+  
+                .el-range__close-icon {
+                  line-height: 20px;
+                }
+              }
+
+  
+              .el-input__icon {
+                height: 28px;
+                line-height: 28px;
+              }
+  
+              .el-input__suffix {
+                height: 28px;
+                line-height: 28px;
+              }
+  
+              .el-input__prefix {
+                height: 28px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+      }
+  
+      .userCustomMobanPageContainer-tables {
+        display: block;
+        border-radius: 4px;
+        background: $intBackground;
+        margin-bottom: 12px;
+        .el-table{
+          margin-bottom: 12px;
+          .el-table__header-wrapper .el-table__header {
+            th {
+              background: $tableHeaderBackground;
+            }
+          }
+    
+          th {
+            padding: 8px 0;
+            background: #f5f7fa;
+          }
+    
+          td {
+            padding: 4px 0;
+            font-size: 12px;
+    
+            .statusNormalColor {
+              color: $statusNormalColor;
+            }
+    
+            .statusAbnormalColor {
+              color: $statusAbnormalColor;
+            }
+    
+            .operationNormalColor {
+              color: $operationNormalColor;
+            }
+    
+            .operationAbnormalColor {
+              color: $operationAbnormalColor;
+            }
+    
+            .el-button {
+              color: $operationNormalColor;
+    
+              &.operationNormalColor {
+                color: $operationNormalColor;
+              }
+    
+              &.operationAbnormalColor {
+                color: $operationAbnormalColor;
+              }
+            }
+          }
+        }
+        .userCustomMobanPageContainer-paginations {
+          overflow: hidden;
+          display: block;
+          margin-bottom: 12px;
+    
+          .el-pagination {
+            float: right;
+            font-size: 12px;
+            padding: 0;
+    
+            button {
+              height: 22px;
+              line-height: 22px;
+            }
+    
+            span:not([class*=suffix]) {
+              height: 22px;
+              line-height: 22px;
+              font-size: 12px;
+            }
+    
+            span {
+              font-size: 12px;
+            }
+    
+            .el-pagination__editor {
+              height: 22px;
+              line-height: 22px;
+              font-size: 12px;
+    
+              .el-input__inner {
+                height: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                border-radius: 0;
+              }
+            }
+    
+            .el-pagination__sizes {
+              height: 22px;
+              line-height: 22px;
+              font-size: 12px;
+    
+              .el-input__inner {
+                height: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                border-radius: 0;
+              }
+            }
+    
+            .el-pager {
+              li {
+                height: 22px;
+                line-height: 22px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,902 @@
+// userCustomGroupPage.scss  组合页面
+
+//变量定义
+$border:1px solid #e9e9e9; //边框
+$highborder:1px solid #3491eb; //边框
+$pageBackground:#f9f9f9; //页面背景色
+$intBackground:#fff; //模块背景色
+$fontFamily:"微软雅黑,microsoft yahei"; //字体
+$color:#666666; //字体颜色
+$highColor:#3491eb; //高亮颜色
+$tableHeaderBackground: #f5f7fa;
+$statusNormalColor:#10ad57; //表格状态的正常颜色
+$statusAbnormalColor:#ffb82b; //表格状态的异常颜色
+$operationNormalColor:#20a0ff; //表格操作的正常颜色
+$operationAbnormalColor:#ff4949; //表格操作的删除颜色
+
+.userCustomGroupPage{
+    width: 100%;
+    font-family: $fontFamily;
+    color: $color;
+    .userCustomGroupPageContainer {
+        overflow: hidden;
+        background: $intBackground;
+        padding: 11px 16px 11px 16px;
+        .userCustomMobanPageContainer-tabs{
+            .el-tabs__header{
+                margin: 0 0 10px;
+            }
+            .userCustomMobanPageContainer-tables{
+                display: block;
+                border-radius: 4px;
+                background: $intBackground;
+                .el-table__header-wrapper .el-table__header{
+                  th{
+                      background: $tableHeaderBackground;
+                  }
+                }
+                .el-table th{
+                  padding: 8px 0;
+                  background: #f5f7fa;
+                }
+                .el-table td{
+                  padding: 4px 0;
+                  font-size: 12px;
+                  .statusNormalColor{
+                    color: $statusNormalColor;
+                  }
+                  .statusAbnormalColor{
+                    color: $statusAbnormalColor;
+                  }
+                  .operationNormalColor{
+                    color: $operationNormalColor;
+                  }
+                  .operationAbnormalColor{
+                    color: $operationAbnormalColor;
+                  }
+                  .el-button{
+                    color: $operationNormalColor;
+                    &.operationNormalColor{
+                      color: $operationNormalColor;
+                    }
+                    &.operationAbnormalColor{
+                      color: $operationAbnormalColor;
+                    }
+                  }
+                }
+                .userCustomMobanPageContainer-paginations{
+                    overflow: hidden;
+                    display: block;
+                    margin: 10px 0 0;
+                    
+                    .el-pagination{
+                        float: right;
+                        font-size: 12px;
+                        padding: 0;
+                        button{
+                        height: 22px;
+                        line-height: 22px;
+                        }
+                        span:not([class*=suffix]){
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 12px;
+                        }
+                        span{
+                        font-size: 12px;
+                        }
+                        .el-pagination__editor{
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 12px;
+                        .el-input__inner{
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 12px;
+                            border-radius: 0;
+                        }
+                        }
+                        .el-pagination__sizes{
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 12px;
+                        .el-input__inner{
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 12px;
+                            border-radius: 0;
+                        }
+                        } 
+                        .el-pager{
+                        li{
+                            height: 22px;
+                            line-height: 22px;
+                            font-size: 12px;
+                        }
+                        }
+                    }
+                }
+            }
+            .userCustomMobanPageContainer-buttons {
+                display: block;
+                height: auto;
+                overflow: hidden;
+                background-attachment: fixed;
+                border-radius: 4px;
+          
+                .el-button {
+                  width: 65px;
+                  height: 26px;
+                  padding: 0;
+                  color: $color;
+                  margin: 0 10px 8px 0;
+                }
+            }
+            .userCustomMobanPageContainer-conditions {
+                display: block;
+                border: $border;
+                border-radius: 4px;
+                background: $intBackground;
+                overflow: hidden;
+                padding: 10px 0;
+                margin-bottom: 12px;
+          
+                .userCustomMobanPageContainer-conditions__form {
+                  width: 100%;
+          
+                  .el-form-item {
+                    margin: 12px 0;
+                    padding: 0;
+                    width: 100%;
+          
+                    .el-form-item__label {
+                      width: 30%;
+                      font-size: 12px;
+                      line-height: 28px;
+                    }
+          
+                    .el-form-item__content {
+                      font-size: 12px;
+                      line-height: normal;
+          
+                      .el-input {
+                        .el-input__inner {
+                          width: 210px;
+                          height: 28px;
+                          border-radius: 0;
+                          font-size: 12px;
+                        }
+                      }
+
+                      .el-radio__label{
+                        font-size: 12px;
+                      }
+                      .el-cascader{
+                        font-size: 12px;
+                      }
+          
+                      .el-textarea{
+                        width: 210px;
+                        border-radius: 0;
+                        .el-textarea__inner{
+                          border-radius: 0;
+                        }
+                      }
+          
+                      .el-cascader {
+                        font-size: 12px;
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-select {
+                        height: 28px;
+                        line-height: 28px;
+          
+                        .el-tag{
+                          background-color: #f0f2f5a8;
+                        }
+          
+                        .el-input.el-input--suffix {
+                          height: 28px;
+                          line-height: 28px;
+          
+                          .el-input__inner {
+                            height: 28px;
+                            line-height: 28px;
+                          }
+                        }
+                      }
+          
+                      .el-date-editor.el-range-editor.el-input__inner.el-date-editor--daterange {
+                        width: 210px;
+                        height: 28px;
+                        border-radius: 0;
+          
+                        .el-range__icon {
+                          line-height: 20px;
+                        }
+          
+                        .el-range-input {
+                          font-size: 12px;
+                        }
+          
+                        .el-range-separator {
+                          line-height: 20px;
+                          font-size: 12px;
+                        }
+          
+                        .el-range__close-icon {
+                          line-height: 20px;
+                        }
+                      }
+                      .el-date-editor.el-range-editor.el-input__inner.el-date-editor--datetimerange {
+                        width: 210px;
+                        height: 28px;
+                        border-radius: 0;
+          
+                        .el-range__icon {
+                          line-height: 20px;
+                        }
+          
+                        .el-range-input {
+                          font-size: 12px;
+                        }
+          
+                        .el-range-separator {
+                          line-height: 20px;
+                          font-size: 12px;
+                          width: auto;
+                        }
+          
+                        .el-range__close-icon {
+                          line-height: 20px;
+                        }
+                      }
+  
+          
+                      .el-input__icon {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-input__suffix {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-input__prefix {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+                    }
+                  }
+                }
+            }
+            .userCustomMobanPageContainer2 {
+              overflow: hidden;
+              background: $intBackground;
+          
+              .userCustomMobanPageContainer-buttons {
+                display: block;
+                height: auto;
+                overflow: hidden;
+                background-attachment: fixed;
+                border-radius: 4px;
+          
+                .el-button {
+                  width: 65px;
+                  height: 26px;
+                  padding: 0;
+                  color: $color;
+                  margin: 0 10px 8px 0;
+                }
+              }
+              
+              .userCustomMobanPageContainer-contents{
+                overflow: hidden;
+                padding-bottom: 10px;
+                
+                .userCustomMobanPageContainer-conditions {
+                  display: block;
+                  border: $border;
+                  border-radius: 4px;
+                  background: $intBackground;
+                  overflow: hidden;
+                  padding: 10px 0;
+                  margin-bottom: 12px;
+            
+                  .userCustomMobanPageContainer-conditions__form {
+                    width: 100%;
+            
+                    .el-form-item {
+                      margin: 12px 0;
+                      padding: 0;
+                      width: 100%;
+            
+                      .el-form-item__label {
+                        width: 30%;
+                        font-size: 12px;
+                        line-height: 28px;
+                      }
+            
+                      .el-form-item__content {
+                        font-size: 12px;
+                        line-height: normal;
+            
+                        .el-input {
+                          .el-input__inner {
+                            width: 210px;
+                            height: 28px;
+                            border-radius: 0;
+                            font-size: 12px;
+                          }
+                        }
+
+                        .el-radio__label{
+                          font-size: 12px;
+                        }
+                        .el-cascader{
+                          font-size: 12px;
+                        }
+            
+                        .el-textarea{
+                          width: 210px;
+                          border-radius: 0;
+                          .el-textarea__inner{
+                            border-radius: 0;
+                          }
+                        }
+            
+                        .el-cascader {
+                          font-size: 12px;
+                          height: 28px;
+                          line-height: 28px;
+                        }
+            
+                        .el-select {
+                          height: 28px;
+                          line-height: 28px;
+            
+                          .el-tag{
+                            background-color: #f0f2f5a8;
+                          }
+            
+                          .el-input.el-input--suffix {
+                            height: 28px;
+                            line-height: 28px;
+            
+                            .el-input__inner {
+                              height: 28px;
+                              line-height: 28px;
+                            }
+                          }
+                        }
+            
+                        .el-date-editor.el-range-editor.el-input__inner.el-date-editor--daterange {
+                          width: 210px;
+                          height: 28px;
+                          border-radius: 0;
+            
+                          .el-range__icon {
+                            line-height: 20px;
+                          }
+            
+                          .el-range-input {
+                            font-size: 12px;
+                          }
+            
+                          .el-range-separator {
+                            line-height: 20px;
+                            font-size: 12px;
+                          }
+            
+                          .el-range__close-icon {
+                            line-height: 20px;
+                          }
+                        }
+                        .el-date-editor.el-range-editor.el-input__inner.el-date-editor--datetimerange {
+                          width: 210px;
+                          height: 28px;
+                          border-radius: 0;
+            
+                          .el-range__icon {
+                            line-height: 20px;
+                          }
+            
+                          .el-range-input {
+                            font-size: 12px;
+                          }
+            
+                          .el-range-separator {
+                            line-height: 20px;
+                            font-size: 12px;
+                            width: auto;
+                          }
+            
+                          .el-range__close-icon {
+                            line-height: 20px;
+                          }
+                        }
+    
+            
+                        .el-input__icon {
+                          height: 28px;
+                          line-height: 28px;
+                        }
+            
+                        .el-input__suffix {
+                          height: 28px;
+                          line-height: 28px;
+                        }
+            
+                        .el-input__prefix {
+                          height: 28px;
+                          line-height: 28px;
+                        }
+                      }
+                    }
+                  }
+                }
+            
+                .userCustomMobanPageContainer-tables {
+                  display: block;
+                  border-radius: 4px;
+                  background: $intBackground;
+                  margin-bottom: 12px;
+            
+                  .el-table__header-wrapper .el-table__header {
+                    th {
+                      background: $tableHeaderBackground;
+                    }
+                  }
+            
+                  .el-table th {
+                    padding: 8px 0;
+                    background: #f5f7fa;
+                  }
+            
+                  .el-table td {
+                    padding: 4px 0;
+                    font-size: 12px;
+            
+                    .statusNormalColor {
+                      color: $statusNormalColor;
+                    }
+            
+                    .statusAbnormalColor {
+                      color: $statusAbnormalColor;
+                    }
+            
+                    .operationNormalColor {
+                      color: $operationNormalColor;
+                    }
+            
+                    .operationAbnormalColor {
+                      color: $operationAbnormalColor;
+                    }
+            
+                    .el-button {
+                      color: $operationNormalColor;
+            
+                      &.operationNormalColor {
+                        color: $operationNormalColor;
+                      }
+            
+                      &.operationAbnormalColor {
+                        color: $operationAbnormalColor;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+        }
+    }
+    .userCustomMobanPageContainer-msgDialog{
+      width: auto;
+      height: auto;
+      .el-dialog{
+        .el-dialog__header{
+          display: none;
+        }
+        .el-dialog__body{
+          padding: 16px 12px;
+          .el-form-item__label{
+            font-size: 12px;
+          }
+          .userCustomMobanPageContainer-msgDialog__btns{
+            margin: 0 0 12px 0;
+            .el-button {
+              width: 65px;
+              height: 26px;
+              padding: 0;
+              color: $color;
+            }
+          }
+          .userCustomMobanPageContainer-msgDialog__body{
+            border: $border;
+            margin: 10px 0 10px 0;
+            
+            .userCustomMobanPageContainer-msgDialog__bodyTitle{
+              width: auto;
+              height: 38px;
+              line-height: 38px;
+              padding-left: 14px;
+              font-size: 14px;
+              border-bottom: $border;
+            }
+            .userCustomMobanPageContainer-msgDialog__bodyContent{
+              padding: 18px 0;
+              .userCustomMobanPageContainer-conditions {
+                display: block;
+                border-radius: 4px;
+                background: $intBackground;
+                overflow: hidden;
+          
+                .userCustomMobanPageContainer-conditions__form {
+                  width: 100%;
+          
+                  .el-form-item {
+                    margin: 12px 0;
+                    padding: 0;
+                    width: 100%;
+                    .el-form-item__label {
+                      width: 30%;
+                      font-size: 12px;
+                      line-height: 28px;
+                    }
+          
+                    .el-form-item__content {
+                      font-size: 12px;
+                      line-height: 28px;
+          
+                      .el-input {
+                        .el-input__inner {
+                          width: 210px;
+                          height: 28px;
+                          border-radius: 0;
+                          font-size: 12px;
+                        }
+                      }
+
+                      .el-radio__label{
+                        font-size: 12px;
+                      }
+                      .el-cascader{
+                        font-size: 12px;
+                      }
+
+                      .el-textarea{
+                        width: 210px;
+                        border-radius: 0;
+                        .el-textarea__inner{
+                          border-radius: 0;
+                        }
+                      }
+          
+                      .el-cascader {
+                        font-size: 12px;
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-select {
+                        height: 28px;
+                        line-height: 28px;
+          
+                        .el-input.el-input--suffix {
+                          height: 28px;
+                          line-height: 28px;
+          
+                          .el-input__inner {
+                            height: 28px;
+                            line-height: 28px;
+                          }
+                        }
+                      }
+          
+                      .el-date-editor.el-range-editor.el-input__inner.el-date-editor--daterange {
+                        width: 210px;
+                        height: 28px;
+                        border-radius: 0;
+          
+                        .el-range__icon {
+                          line-height: 20px;
+                        }
+          
+                        .el-range-input {
+                          font-size: 12px;
+                        }
+          
+                        .el-range-separator {
+                          line-height: 20px;
+                          font-size: 12px;
+                        }
+          
+                        .el-range__close-icon {
+                          line-height: 20px;
+                        }
+                      }
+                      .el-date-editor.el-range-editor.el-input__inner.el-date-editor--datetimerange {
+                        width: 210px;
+                        height: 28px;
+                        border-radius: 0;
+          
+                        .el-range__icon {
+                          line-height: 20px;
+                        }
+          
+                        .el-range-input {
+                          font-size: 12px;
+                        }
+          
+                        .el-range-separator {
+                          line-height: 20px;
+                          font-size: 12px;
+                          width: auto;
+                        }
+          
+                        .el-range__close-icon {
+                          line-height: 20px;
+                        }
+                      }
+  
+          
+                      .el-input__icon {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-input__suffix {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+          
+                      .el-input__prefix {
+                        height: 28px;
+                        line-height: 28px;
+                      }
+                    }
+                    &.el-form-item__contentOfInput{
+                      .el-form-item__content{
+                        line-height: normal;
+                        height: auto;
+                        width: 60%;
+                        .el-input{
+                          width: 100%;
+                          .el-input__inner{
+                            border-radius: 0;
+                            font-family: unset;
+                            width: 100%;
+                          }
+                        }
+                      }
+                    }
+          
+                    &.el-form-item__contentOfTextarea{
+                      position: relative;
+                      .el-button.is-circle.uCDPageContainer_conditions_formEditBtn{
+                        position: absolute;
+                        top: 0;
+                        right: -34px;
+                        padding: 2px;
+                        width: 24px;
+                        height: 24px;
+                        i{
+                          font-size: 12px;
+                        }
+                      }
+                      .el-button.is-circle.uCDPageContainer_conditions_formDeleteBtn{
+                        position: absolute;
+                        top: 30px;
+                        right: -34px;
+                        padding: 2px;
+                        width: 24px;
+                        height: 24px;
+                        i{
+                          font-size: 12px;
+                        }
+                      }
+                      .el-form-item__content{
+                        line-height: normal;
+                        height: auto;
+                        width: 60%;
+                        .el-textarea{
+                          width: 100%;
+                          .el-textarea__inner{
+                            border-radius: 0;
+                            font-family: unset;
+                            width: 100%;
+                            font-size: 12px;
+                            padding: 1px 10px 5px 10px;
+                            text-align: justify;
+                            line-height: 1.6;
+                            &::-webkit-scrollbar {
+                              height: 5px;
+                              width: 5px;
+                              background: rgba(0, 0, 0, 0.01);
+                              cursor: pointer;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    
+                  }
+                }
+              }
+              .el-input{
+                height: 28px;
+                line-height: 28px;
+                .el-input__inner{
+                  width: 210px;
+                  height: 28px;
+                  line-height: 28px;
+                  border-radius: 0;
+                  font-size: 12px;
+                }
+              }
+              .el-select .el-tag{
+                background-color: #f0f2f5a8;
+              }
+              .el-tree.filter-tree{
+                border: $border;
+                width: calc(98% - 2px);
+                height: 290px;
+                overflow: auto;
+                font-size: 12px;
+                .el-tree-node__content span{
+                  font-size: 12px;
+                }
+              }
+              .el-button.saveTreeLeafBtns{
+                padding: 10px;
+                margin-top: 150px;
+                border: 1px solid #dcdfe6;
+                background-color: #f5f7fa;
+                color: #c0c4cc;
+                i{
+                  font-size: 12px;
+                }
+                &:hover{
+                  color: #fff;
+                  background-color: #409eff;
+                  border-color: #409eff;
+                }
+              }
+              .el-transfer{
+                padding-top: 7px;
+                .el-transfer-panel{
+                  border-radius: 0;
+                  .el-transfer-panel__header span{
+                    font-size: 14px;
+                  }
+                  .el-transfer-panel__body{
+                    height: 273px;
+                    font-size: 12px;
+                    .el-transfer-panel__filter{
+                      margin: 10px;
+                      .el-transfer-panel__list.is-filterable{
+                        height: 233px;
+                      }
+                    }
+                    .el-transfer-panel__list.is-filterable{
+                      height: 233px;
+                    }
+                    .el-checkbox__label{
+                      font-size: 12px;
+                    }
+                  }
+                }
+                .el-transfer__buttons{
+                  padding: 0 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .userCustomMobanPageContainer-msgDialog2{
+      width: auto;
+      height: auto;
+
+      .el-dialog {
+        .el-dialog__header {
+          display: none;
+        }
+
+        .el-dialog__body {
+          padding: 16px 12px;
+
+          .el-form-item__label {
+            font-size: 12px;
+          }
+
+          .userCustomMobanPageContainer-msgDialog__btns {
+            margin: 0 0 12px 0;
+
+            .el-button {
+              width: 65px;
+              height: 26px;
+              padding: 0;
+              color: $color;
+            }
+          }
+
+          .userCustomMobanPageContainer-msgDialog__body {
+            border: $border;
+            margin: 10px 0 10px 0;
+
+            .userCustomMobanPageContainer-msgDialog__bodyTitle {
+              width: auto;
+              height: 38px;
+              line-height: 38px;
+              padding-left: 14px;
+              font-size: 14px;
+              border-bottom: $border;
+            }
+
+            .userCustomMobanPageContainer-msgDialog__bodyContent {
+              padding: 18px;
+
+              &:hover {
+                cursor: default;
+              }
+
+              .userCustomMobanPageContainer-conditions {
+                display: block;
+                border-radius: 4px;
+                background: $intBackground;
+                overflow: hidden;
+                .el-col{
+                    padding: 5px 0 5px 0;
+                    margin: 0;
+                }
+                .conditionsLabel {
+                  float: left;
+                  width: calc(30% - 8px);
+                  text-align: right;
+                  padding: 4px;
+                  font-size: 12px;
+                  line-height: 1.5;
+                }
+                .conditionsLabelLonger{
+                    float: left;
+                    width: calc(15% - 8px);
+                    text-align: right;
+                    padding: 4px;
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+
+                .conditionsContent {
+                  float: left;
+                  width: calc(70% - 38px);
+                  max-height: 70px;
+                  overflow: auto;
+                  padding: 4px 0 4px 10px;
+                  font-size: 12px;
+                  color: $highColor;
+                  text-align: justify;
+                  line-height: 1.5;
+                }
+                .conditionsContentLonger{
+                    float: left;
+                    width: calc(85% - 48px);
+                    max-height: 70px;
+                    overflow: auto;
+                    padding: 4px 10px 4px 10px;
+                    font-size: 12px;
+                    color: $highColor;
+                    text-align: justify;
+                    line-height: 1.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}

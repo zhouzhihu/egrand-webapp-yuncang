@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "errorCode": null,
+  "errorMsg": null,
+  "data": {
+    "pageNum": 1,
+    "pageSize": 10,
+    "size": 1,
+    "orderBy": null,
+    "startRow": 1,
+    "endRow": 1,
+    "total": 1,
+    "pages": 1,
+    "list": [{
+      "scid": "c0717c8e188040559c2ae57e9f3b7187",
+      "jkid": "de5b3337ddaf4ba787066510675be817",
+      "yhid": "7c8434eded3c11e895d97cd30ae45ac0",
+      "scrq": 1547633114000,
+      "jkmc": "查询API分类",
+      "jkqqdz": "http://gzhyht.ihyht.com:14000/rest/api/query/api/type",
+      "jkqqfsDm": "GET",
+      "jkssflDm": "QT",
+      "jkssptDm": "SYS"
+    }],
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [1],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "lastPage": 1,
+    "firstPage": 1
+  }
+}

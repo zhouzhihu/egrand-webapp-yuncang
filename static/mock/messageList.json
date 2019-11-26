@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "errorCode": null,
+  "errorMsg": null,
+  "data": {
+    "pageNum": 1,
+    "pageSize": 10,
+    "size": 4,
+    "orderBy": null,
+    "startRow": 1,
+    "endRow": 4,
+    "total": 4,
+    "pages": 1,
+    "list": [{
+      "message_send_date": "2019-10-12",
+      "message_from_userid": "张三",
+      "message_id": "75e10a315ba235e10e42e4700fd90cad",
+      "message_to_state": 0,
+      "message_topic": "第二季度中心组织学习资料已更新",
+      "message_to_userid": "7c8434eded3c11e895d97cd30ae45ac0"
+    }, {
+      "message_send_date": "2019-10-10",
+      "message_from_userid": "李四",
+      "message_id": "65e410014d73d8f962affba316259070",
+      "message_to_state": 0,
+      "message_topic": "第一期党委会议资料上传完毕"
+    }, {
+      "message_send_date": "2019-10-09",
+      "message_from_userid": "-1",
+      "message_id": "9f27adec1c3d56958bc8b2eb737dd4f9",
+      "message_to_state": 0,
+      "message_topic": "学习贯彻习近平总书记重要讲话",
+      "message_to_userid": "7c8434eded3c11e895d97cd30ae45ac0"
+    }],
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [1],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "lastPage": 1,
+    "firstPage": 1
+  }
+}

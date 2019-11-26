@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "errorCode": null,
+  "errorMsg": null,
+  "data": {
+    "list":[{
+      "id": 7,
+      "name": "民主生活会",
+      "date": "2016-05-02(张三)",
+      "fileType": "folder",
+      "size": "10.1K"
+    },{
+      "id": 8,
+      "name": "第一次党委会议",
+      "date": "2016-05-02(张三)",
+      "fileType": "word",
+      "size": "10.1K"
+    },{
+      "id": 9,
+      "name": "中心组学习报名民丹",
+      "date": "2016-05-02(张三)",
+      "fileType": "excel",
+      "size": "10.1K"
+    }]
+  }
+}

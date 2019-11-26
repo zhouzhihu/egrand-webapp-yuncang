@@ -1,0 +1,381 @@
+/*-------------------------------------
+zTree Style动态表格
+
+-------------------------------------*/
+
+.ztreetable.ztree * {padding:0; margin:0; font-size:12px; font-family: "微软雅黑","microsoft yahei";outline-color: none !important;}
+.ztreetable.ztree li ul{ margin:0; padding:0 0 0 18px}
+.ztreetable.ztree li ul.line{ background: url(img/icon_dian2.png) repeat-y;width: 1px;background-position-x: 8px;}
+
+.ztreetable.ztree li a {/*padding:1px 3px 0 0;*/ margin:0; cursor:pointer; height:40px; color:#333; background-color: transparent;text-decoration:none; vertical-align:top; display: flex;outline:0;-webkit-appearance:none;}
+.ztreetable.ztree li a:hover {text-decoration:none;}
+.ztreetable.ztree li a.curSelectedNode {padding-top:0px; background-color:rgb(239, 246, 253); color:black; height:16px; border:1px rgb(239, 246, 253) solid;-webkit-appearance:none;outline:0;}
+.ztreetable.ztree li a.curSelectedNode_Edit {padding-top:0px; background-color:rgb(239, 246, 253); color:black; height:16px; border:1px rgb(239, 246, 253) solid; opacity:0.8;}
+.ztreetable.ztree li a.tmpTargetNode_inner {padding-top:0px; background-color:rgb(239, 246, 253); color:white; height:16px; border:1px #316AC5 solid;
+	opacity:0.8; filter:alpha(opacity=80)}
+.ztreetable.ztree li a input.rename {height:14px; width:80px; padding:0; margin:0;font-size:12px; border:1px #7EC4CC solid; *border:0px}
+.ztreetable.ztree li span {line-height:16px; margin-right:2px}
+.ztreetable.ztree li span.button {line-height:0; margin:0; width:16px; height:16px; display: inline-block; vertical-align:middle;
+	border:0 none; cursor: pointer;outline:none;
+	background-color:transparent; background-repeat:no-repeat; background-attachment: scroll;
+	background-image:url("./img/zTreeStandard.png"); *background-image:url("./img/zTreeStandard.gif")}
+
+.ztreetable.ztree li span.button.chk {width:13px; height:13px; margin:0 3px 0 0; cursor: auto}
+.ztreetable.ztree li span.button.chk.checkbox_false_full {background-position:0 0}
+.ztreetable.ztree li span.button.chk.checkbox_false_full_focus {background-position:0 -14px}
+.ztreetable.ztree li span.button.chk.checkbox_false_part {background-position:0 -28px}
+.ztreetable.ztree li span.button.chk.checkbox_false_part_focus {background-position:0 -42px}
+.ztreetable.ztree li span.button.chk.checkbox_false_disable {background-position:0 -56px}
+.ztreetable.ztree li span.button.chk.checkbox_true_full {background-position:-14px 0}
+.ztreetable.ztree li span.button.chk.checkbox_true_full_focus {background-position:-14px -14px}
+.ztreetable.ztree li span.button.chk.checkbox_true_part {background-position:-14px -28px}
+.ztreetable.ztree li span.button.chk.checkbox_true_part_focus {background-position:-14px -42px}
+.ztreetable.ztree li span.button.chk.checkbox_true_disable {background-position:-14px -56px}
+.ztreetable.ztree li span.button.chk.radio_false_full {background-position:-28px 0}
+.ztreetable.ztree li span.button.chk.radio_false_full_focus {background-position:-28px -14px}
+.ztreetable.ztree li span.button.chk.radio_false_part {background-position:-28px -28px}
+.ztreetable.ztree li span.button.chk.radio_false_part_focus {background-position:-28px -42px}
+.ztreetable.ztree li span.button.chk.radio_false_disable {background-position:-28px -56px}
+.ztreetable.ztree li span.button.chk.radio_true_full {background-position:-42px 0}
+.ztreetable.ztree li span.button.chk.radio_true_full_focus {background-position:-42px -14px}
+.ztreetable.ztree li span.button.chk.radio_true_part {background-position:-42px -28px}
+.ztreetable.ztree li span.button.chk.radio_true_part_focus {background-position:-42px -42px}
+.ztreetable.ztree li span.button.chk.radio_true_disable {background-position:-42px -56px}
+
+.ztreetable.ztree li span.button.switch {width:16px; height:16px}
+.ztreetable.ztree li span.button.root_open{background-position:-92px -54px}
+.ztreetable.ztree li span.button.root_close{background-position:-74px -54px}
+.ztreetable.ztree li span.button.roots_open{background-position:-92px 0}
+.ztreetable.ztree li span.button.roots_close{background-position:-74px 0}
+.ztreetable.ztree li span.button.center_open{background-position:-92px -18px}
+.ztreetable.ztree li span.button.center_close{background-position:-74px -18px}
+.ztreetable.ztree li span.button.bottom_open{background-position:-92px -36px}
+.ztreetable.ztree li span.button.bottom_close{background-position:-74px -36px}
+.ztreetable.ztree li span.button.noline_open{background: url(img/icon_jianhao.png) no-repeat;}
+.ztreetable.ztree li span.button.noline_close{background: url(img/icon_jiahao.png) no-repeat;}
+.ztreetable.ztree li span.button.root_docu{ background:none;}
+.ztreetable.ztree li span.button.roots_docu{background-position:-56px 0}
+.ztreetable.ztree li span.button.center_docu{background-position:-56px -18px}
+.ztreetable.ztree li span.button.bottom_docu{background-position:-56px -36px}
+.ztreetable.ztree li span.button.noline_docu{ background:none;}
+
+.ztreetable.ztree li span.button.ico_open{margin-right:2px; background-position:-110px -16px; vertical-align:top; *vertical-align:middle}
+.ztreetable.ztree li span.button.ico_close{margin-right:2px; background-position:-110px 0; vertical-align:top; *vertical-align:middle}
+.ztreetable.ztree li span.button.ico_docu{margin-right:2px; background-position:-110px -32px; vertical-align:top; *vertical-align:middle}
+.ztreetable.ztree li span.button.edit {margin-right:2px; background-position:-110px -48px; vertical-align:top; *vertical-align:middle}
+.ztreetable.ztree li span.button.remove {margin-right:2px; background-position:-110px -64px; vertical-align:top; *vertical-align:middle}
+
+.ztreetable.ztree li span.button.ico_loading{margin-right:2px; background:url(./img/loading.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+
+.ztree_head li.headbox tr td div.colBtnBox{display: inline-block;margin: 0px;padding: 0px;height: 27px;width: 22px;margin-left: 5px;position: relative;top: 17%;}
+.ztree_head li.headbox tr td div.colBtnBox div{display: inline-block;margin: 0px;padding: 0px;vertical-align: middle;cursor: pointer;}
+.ztree_head li.headbox tr td div.colBtnBox div.colUp{background: url(img/icon_sj.png) no-repeat;background-position:0px 6px;background-size:12px;border: none;width: 15px;height: 16px;float: left;opacity: 0.2;}
+.ztree_head li.headbox tr td div.colBtnBox div.colDown{background: url(img/icon_sj.png) no-repeat;background-position:0px -11px;background-size:12px;border: none;width: 15px;height: 17px;float: left;opacity: 0.2;}
+.ztree_head li.headbox tr td div.colBtnBox div.colCurHigh{opacity: 0.9;}
+.ztreetable_section{
+	margin-top: 10px;
+}
+.ztreetable_section .ztree_head {
+	width: 100%;
+}
+.ztreetable_section .headbox{
+	width: 100%;
+}
+
+.ztreetable_section .ztree_head .ztree_header{
+	font-size: 18px;
+    color: #333333;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 13px;
+}
+.ztreetable_section .ztree_head .ztree_con{
+	font-size: 14px;
+	color: #333333;
+	height: 25px;
+}
+.ztreetable_section .ztree_head .ztree_con .ztree_con_1{
+	float: left;
+}
+.ztreetable_section .ztree_head .ztree_con .ztree_con_2{
+	float: right;
+}
+/*分页*/
+.pagination_box{
+	float: right;
+	margin: 12px 0px 10px 0px;
+}
+.pagTabTool a {
+	display: inline-block;
+    text-decoration: none;
+    background: #fff;
+    font-size: 12px;
+    min-width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(151, 164, 190);
+    color: #333;
+    border: 1px solid rgb(209, 217, 229);
+    box-sizing: border-box;
+    border-right: none;
+}
+ .pagTabTool span {
+	display: inline-block;
+    border-color: rgb(209, 217, 229);
+    background-color: #3491eb;
+    color: #fff;
+    font-size: 12px;
+	border: 1px solid rgb(209, 217, 229);
+}
+.pagTabTool span.current {
+	display: inline-block;
+	min-width: 21px;
+    height: 20px;
+    line-height: 22px;
+    background-color: #3491eb;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #3491eb;
+    border-bottom: 1px solid #3491eb;
+}
+.pagTabTool span.prev.current{
+ 	background: #fff;
+ 	color: rgb(151, 164, 190);
+ 	border-left: 1px solid rgb(209, 217, 229);
+ 	border-top: 1px solid rgb(209, 217, 229);
+    border-bottom: 1px solid rgb(209, 217, 229);
+ 	cursor: not-allowed;
+}
+.pagTabTool span.next.current{
+ 	background: #fff;
+ 	color: rgb(151, 164, 190);
+ 	border-right: 1px solid rgb(209, 217, 229);
+ 	border-top: 1px solid rgb(209, 217, 229);
+    border-bottom: 1px solid rgb(209, 217, 229);
+ 	cursor: not-allowed;
+}
+.pagTabTool a.prev{
+	color: rgb(151, 164, 190);
+}
+.pagTabTool a.next{
+	color: rgb(151, 164, 190);
+	border-right: 1px solid rgb(209, 217, 229);
+}
+
+.pagTabTool .current.prev, .pagTabTool .current.next{
+	/*color:#3491eb;
+	border-color:#3491eb;
+	background:#3491eb;*/
+}
+
+/*ztree表格*/
+.icon_div {
+	display: inline-block;
+	height: 25px;
+	width: 35px;
+}
+
+.icon_div a.icon_see,.icon_div a.icon_edit {
+	color: #3d8ee2;
+	cursor: pointer;
+}
+
+.ztreetable.ztree {
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    color: rgb(31, 42, 61);
+    overflow: hidden;
+}
+/*.ztreetable.ztree::-webkit-scrollbar{
+	width: 0px;
+	height: 5px;
+}*/
+.ztreetable_section table{
+	background: #f7f7f7;
+	border-collapse: collapse;
+}
+
+.ztreetable.ztree li ul {
+	padding-left: 0px
+}
+.ztreetable.ztree a{
+	display: inline-block;
+}
+
+.ztreetable.ztree li a {
+	vertical-align: middle;
+	height: 40px;
+	outline:none;
+	-webkit-appearance:none;
+	border-right-width: 0px;
+	padding-top: 0px;
+	height: 40px;
+	border: none;
+	cursor: default;
+	opacity: 1;
+	transition: background-color .25s ease;
+	color: #000;
+}
+.ztreetable.ztree li a:hover{
+	background-color: rgb(238, 240, 246);
+    background-clip: padding-box;
+    text-decoration: none;
+}
+.ztreetable.ztree li a.curSelectedNode {
+	padding-top: 0px;
+	height: 40px;
+	border: none;
+	cursor: default;
+	opacity: 1;
+	transition: background-color .25s ease;
+	color: #000;
+}
+
+.ztreetable_section td:first-child {
+	text-align: left;
+}
+.ztreetable_section .ztreeBox{
+	width: 100%;
+}
+.ztreetable_section .headbox{
+	width: 100%;
+	/*border-top: 1px solid rgb(223, 228, 236);*/
+	/*border-right: 1px solid rgb(223, 228, 236);*/
+	background: #f7f7f7;
+}
+.ztree_head{
+	position: relative;
+}
+
+.ztreetable_section .ztree_head .no_data_li div{
+	height: 70px;
+	line-height: 70px;
+	border: 1px solid rgb(223, 228, 236);
+	border-top: none;
+	text-align: center;
+}
+
+.ztreetable_section .headbox tr{
+	border-top: 1px solid rgb(223, 228, 236);
+	border-bottom: 1px solid rgb(223, 228, 236);
+}
+.ztreetable_section .headbox tr td {
+	font-weight: bold;
+	/*height: 40px;*/
+	/*line-height: 40px;*/
+	border-right: 1px solid rgb(223, 228, 236);
+	border-left: 1px solid rgb(223, 228, 236);
+	text-align: center;
+	color: #6c6c6c;
+	font-size: 14px;
+	overflow: auto;
+	min-width: 50px;
+	overflow: hidden;
+}
+.ztreetable.ztree .tbodycell.swich{
+	border-left: 1px solid rgb(223, 228, 236);
+}
+.ztreetable.ztree .tbodycell {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid rgb(223, 228, 236);
+	border-right: 1px solid rgb(223, 228, 236);
+	text-align: center;
+	box-sizing: border-box;
+	color: #6c6c6c;
+	font-size: 12px;
+	overflow: hidden;
+	min-width: 50px !important;
+}
+.ztreetable.ztree .tbodycell.tbodycell_center {
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	box-sizing: border-box;
+	color: #6c6c6c;
+	font-size: 12px;
+	text-align: center;
+	overflow: hidden;
+	min-width: 50px !important;
+}
+.ztreetable.ztree .tbodycell.tbodycell_left {
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	display: inline-block;
+	box-sizing: border-box;
+	color: #6c6c6c;
+	font-size: 12px;
+	padding-left: 10px;
+	overflow: hidden;
+	min-width: 50px !important;
+}
+.ztreetable.ztree .tbodycell.tbodycell_right {
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	display: inline-block;
+	box-sizing: border-box;
+	color: #6c6c6c;
+	font-size: 12px;
+	padding-right: 10px;
+	overflow: hidden;
+	min-width: 50px !important;
+}
+.ztreetable.ztree .tbodycell.tbodycell_padding.tbodycell_left{
+	padding-left: 26px;
+	min-width: 50px !important;
+}
+
+.ztreetable.ztree .tbodycell.tbodycell_padding2.tbodycell_left{
+	padding-left: 42px;
+	min-width: 50px !important;
+}
+
+.ztreetable.ztree .tbodycell.swich{
+}
+.ztreetable.ztree li a div div a{
+	cursor: pointer;
+}
+focus {
+    outline: none;
+    outline-color: #fff;
+    outline-style: none;
+    outline-width: 0px !important;
+}
+.ztreetable.ztree .tbodycell .markingBtn{
+	display: inline-block;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.ztreetable.ztree .tbodycell .markingBtn .goup{
+	display: inline-block;
+	background: url(img/goup.png) no-repeat;
+	width: 12px;
+	height: 12px;
+}
+.ztreetable.ztree .tbodycell .markingBtn .godown{
+	display: inline-block;
+	background: url(img/godown.png) no-repeat;
+	width: 12px;
+	height: 12px;
+}
+.ztreetable.ztree .tbodycell .markingBtn .gowarn{
+	display: inline-block;
+	background: url(img/gowarn.png) no-repeat;
+	width: 12px;
+	height: 12px;
+}
+
+
+.ztreetable.ztree .tbodycell .font{
+	display: inline-block;
+	color: #3491EB;
+	cursor: pointer;
+	border-radius: 5px;
+}

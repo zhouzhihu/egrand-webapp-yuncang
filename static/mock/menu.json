@@ -1,0 +1,38 @@
+{
+  "path0": [
+    {
+      "name": "第一级",
+      "path": "",
+      "tree": true,
+      "children": [
+        {
+          "name": "工作首页",
+          "path": "#/homePage"
+
+        }
+      ]
+    },
+    {
+      "name": "第一级",
+      "path": "",
+      "tree": true,
+      "children": [
+        {
+          "name": "第二级",
+          "path": "",
+          "children": [
+            {
+              "name": "地区经济分析",
+              "tabsicon":"el-icon-date",
+              "path": "http://106.15.92.96:17030/#/releaseRunshow/909a7124b2c539c1a6d7f449dc58de00/2018081701"
+            },
+            {
+              "name": "测试图表报错通知",
+              "path": "http://106.15.92.96:17030/#/releaseRunshow/909a7124b2c539c1a6d7f449dc58de00/1-3-tj"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

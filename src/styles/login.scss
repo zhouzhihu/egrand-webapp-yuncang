@@ -1,0 +1,220 @@
+html,body,p,div,ul,li,img{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.sjzcpt {
+	width: 100%;
+	height: 100%;
+	color: #e9e9e9;
+	vertical-align: middle;
+	background: url('../../static/assets/img/sjzcpt_bg.png') no-repeat;
+	background-size: cover;
+}
+.sjzcpt .s_header{
+	height: 55px;
+	line-height: 55px;
+	border-bottom: 1px solid rgba(255,255,255,0.50);
+}
+.sjzcpt .s_section{
+	width: 100%;
+	height: auto;
+}
+.sjzcpt .s_footer{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: rgba(0,0,0,0.26);
+	position: absolute;
+	bottom: 0;
+}
+
+.sjzcpt .s_header .s_header_lt{
+	float: left;
+	height: 55px;
+	line-height: 55px;
+	background: url('../../static/assets/img/login_sgd.png') no-repeat;
+	background-position-y: 23px;
+  background-position-x:-15px;
+}
+.sjzcpt .s_header .s_header_rt{
+	float: right;
+	height: 55px;
+	line-height: 55px;
+}
+.sjzcpt .s_header_img1{
+	width: auto;
+	height: 36px;
+	margin: 14px 0 0 21px;
+}
+.sjzcpt .s_header_img2{
+	margin: 0 6px 5px 0;
+	vertical-align: middle;
+}
+.sjzcpt .s_footer_img{
+	width: 14px;
+	height: 14px;
+	margin-right: 12px;
+}
+.sjzcpt .s_header .s_header_rt span{
+	font-family: "微软雅黑","microsoft yahei";
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-right: 32px;
+}
+.sjzcpt .s_footer .s_footer_lt{
+	height: 40px;
+	float: left;
+	margin-left: 32px;
+}
+.sjzcpt .s_footer .s_footer_lt span{
+	opacity: 0.7;
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 0.26px;
+}
+.sjzcpt .s_footer .s_footer_rt{
+	height: 40px;
+	float: right;
+	margin-right: 32px;
+}
+.sjzcpt .s_footer .s_footer_rt span{
+	opacity: 0.7;
+	font-size: 14px;
+	color: #C9DFF0;
+	letter-spacing: 0.35px;
+
+}
+.sjzcpt .s_section_lt{
+	position: absolute;
+	left: 13.9%;
+	top: 35%;
+	text-align: right;
+}
+.sjzcpt .s_section_lt .s_title_big{
+	font-size: 34px;
+	color: #E9E9E9;
+	text-shadow: 0 2px 21px rgba(0,0,0,0.50);
+}
+.sjzcpt .s_section_lt .s_title_small{
+	font-size: 18px;
+	color: #E9E9E9;
+	text-shadow: 0 2px 21px rgba(0,0,0,0.50);
+	margin-top: 16px;
+}
+
+.sjzcpt .s_section_rt{
+	position: absolute;
+	width: 300px;
+	height: 310px;
+	right: 11.8%;
+	top: 29.7%;
+	background: #FFFFFF;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08);
+	border-radius: 4px;
+}
+.sjzcpt .s_section_rt .s_section_title{
+	font-weight: bold;
+	font-size: 18px;
+	color: #007EE5;
+	letter-spacing: 0;
+	margin: 23px 0 30px 27px;
+}
+.sjzcpt .s_section_rt .s_login_form{
+	margin: 0 26px 0 26px;
+}
+
+.sjzcpt .s_section_rt .el-form.s_login_form .el-input__inner{
+	margin: 0;
+	padding: 0;
+	background-color: rgba(32,53,128,0.01) !important;
+	border: none;
+	font-size: 12px;
+	color: #999;
+	letter-spacing: 0.3px;
+	height: 35px !important;
+	margin-left: 8px;
+
+}
+.sjzcpt .s_section_rt .el-form.s_login_form .el-form-item{
+	margin-bottom: 21px !important;
+
+}
+
+.sjzcpt .s_section_rt .s_login_btn.el-button.el-button--primary{
+	width: 248px;
+	background: #007EE5;
+	border: 1px solid rgba(32,53,128,0.16);
+	border-radius: 2.26px;
+	margin-top: 12px;
+  line-height: normal;
+}
+.sjzcpt .s_section_rt .s_login_footer{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 23px;
+	background: rgba(32,53,128,0.01);
+	box-shadow: 0 -1px 0 0 rgba(0,0,0,0.07);
+}
+
+.s_left .s_login_left1{
+	float: left;
+	display: inline-block !important;
+	width: 15px;
+	height: 15px;
+	margin-left: 8px;
+	margin-top: 9px;
+	vertical-align: middle;
+}
+.s_left .s_login_left2{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 215px;
+	height: 35px;
+	display: inline-block;
+}
+.s_right .s_login_left1{
+	float: left;
+	display: inline-block !important;
+	width: 15px;
+	height: 15px;
+	margin-left: 8px;
+	margin-top: 9px;
+	vertical-align: middle;
+}
+.s_right .s_login_left2{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 215px;
+	height: 35px;
+	display: inline-block;
+}
+.sjzcpt .s_section_rt .s_left{
+	margin: 0px;
+	padding: 0px;
+	background: rgba(32,53,128,0.01);
+	border: 1px solid rgba(32,53,128,0.16);
+	border-radius: 2.2px !important;
+	height: 35px !important;
+	line-height: 35px;
+}
+.sjzcpt .s_section_rt .s_right{
+	margin: 0px;
+	padding: 0px;
+	background: rgba(32,53,128,0.01);
+	border: 1px solid rgba(32,53,128,0.16);
+	border-radius: 2.2px !important;
+	height: 35px !important;
+	line-height: 35px;
+}
+.link_box{color: #666;}
+.link_img_cloud{cursor: pointer;opacity: .7;vertical-align: middle;margin-bottom: 3px;margin-right: 5px;}
+.link_img_data{width: 16px;cursor: pointer;opacity: .7;vertical-align: middle;margin-bottom: 3px;margin-right: 5px;}
+

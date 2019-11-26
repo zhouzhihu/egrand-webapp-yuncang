@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "errorCode": null,
+  "errorMsg": null,
+  "data": {
+    "item": {
+      "path": [{
+        "id": "1",
+        "name": "个人文件"
+      }],
+      "coordinater": [{
+        "id": 1,
+        "name": "周志虎"
+      }]
+    },
+    "list":[{
+      "id": 1,
+      "name": "我的文件夹",
+      "date": "2016-05-02(张三)",
+      "fileType": "folder",
+      "size": "10.1K"
+    },{
+      "id": 2,
+      "name": "中心组学习文件",
+      "date": "2016-05-02(张三)",
+      "fileType": "word",
+      "size": "10.1K"
+    },{
+      "id": 3,
+      "name": "中心组学习文件",
+      "date": "2016-05-02(张三)",
+      "fileType": "excel",
+      "size": "10.1K"
+    },{
+      "id": 4,
+      "name": "中心组学习文件",
+      "date": "2016-05-02(张三)",
+      "fileType": "pdf",
+      "size": "10.1K"
+    }]
+  }
+}

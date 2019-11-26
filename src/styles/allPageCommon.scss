@@ -1,0 +1,75 @@
+// allPageCommon.scss针对element全局修改的样式
+html,body{
+    margin: 0;padding: 0;
+    height: 100%;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+	height: 6px;
+	width: 8px;
+	background: rgba(0, 0, 0, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#aside {
+    border-right: 1px solid #ccc;
+    .menu_section {
+        width: auto;
+        overflow: hidden;
+        .inputBox {
+            border-color:#ccc;
+            .inputSearch{
+                display: inline-block;
+                margin: 3px 0 3px 4px;
+                width: 90%;
+                height: 18px;
+                line-height: 18px;
+                background: #FFFFFF;
+                border: 1px solid #DFDFDF;
+                border-radius: 10px;
+                padding-left: 4%;
+                color: #3491eb;
+                font-size: 12px;
+                &:hover{
+                    border-color: #3491eb;
+                }
+            }
+            .imgBox{
+                display: none;
+            }
+        }
+    }
+}
+
+.el-select-dropdown.el-popper{
+    .el-scrollbar{
+        .el-scrollbar__view.el-select-dropdown__list{
+            .el-select-dropdown__item{
+                height: 28px;
+                line-height: 28px;
+                font-size: 12px;
+                span{
+                    line-height: 28px !important; //element给了强制属性
+                }
+            }
+        }
+    }
+}
+.el-cascader-menus.el-popper{
+    .el-cascader-menu{
+        .el-cascader-menu__item{
+            padding: 0 20px;
+            font-size: 12px;
+            height: 28px;
+            line-height: 28px;
+        }
+    }
+}

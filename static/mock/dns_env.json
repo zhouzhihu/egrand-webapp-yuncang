@@ -1,0 +1,30 @@
+{
+  "path0": [
+    {
+      "name": "图表监控分析运行",
+      "path": "/runshow",
+      "iconName": "iconfont icon-leaf",
+      "tree": "false"
+    },
+    {
+      "name": "配置图表监控分析功能",
+      "path": "/setBoard",
+      "iconName": "iconfont icon-leaf",
+      "tree": "false"
+    },
+    {
+      "name": "配置图表监控分析面板",
+      "path": "/setPanel",
+      "iconName": "iconfont icon-leaf",
+      "tree": "false"
+    }
+  ],
+  "dns":{
+    "sso_name":"cas.node.com",
+    "home_name":"127.0.0.1",
+    "sso_host":"http://cas.node.com:18070",
+    "home_host":"http://127.0.0.1:8777",
+    "home_url":"/",
+    "isCaslogin":false
+  }
+}
